@@ -1,0 +1,43 @@
+{
+ "exe": "D:\\Strata\\app\\engine-dsv41\\0.1.51-windows-x86_64-cuda-cuda13\\strata-dsv41.exe",
+ "args": [
+  "--pack",
+  "C:\\Users\\chenhua\\Documents\\Strata\\packs\\deepseek-v4.1-flash-ist-das-2.00bpw",
+  "--max-context",
+  "8192",
+  "--eos",
+  "1",
+  "--dspark",
+  "on",
+  "--dspark-conf",
+  "0.65",
+  "--dspark-block",
+  "3"
+ ],
+ "cwd": "C:\\Users\\chenhua\\AppData\\Local\\Programs\\Strata\\control",
+ "tokenizer": "C:\\Users\\chenhua\\Documents\\Strata\\packs\\deepseek-v4.1-flash-ist-das-2.00bpw\\tokenizer",
+ "model_name": "deepseek-v4.1-flash",
+ "arch": "deepseek41",
+ "log": "D:\\Strata\\app\\strata-deepseek-v4.1-flash-ist-das-2.00bpw.log",
+ "lib_dirs": [
+  "D:\\Strata\\app\\engine-dsv41\\0.1.51-windows-x86_64-cuda-cuda13"
+ ],
+ "port": 8080,
+ "engine_ready_s": 3600,
+ "gpu": 0,
+ "gpus_asked": true,
+ "args_written": [
+  "--pack",
+  "C:\\Users\\chenhua\\Documents\\Strata\\packs\\deepseek-v4.1-flash-ist-das-2.00bpw",
+  "--max-context",
+  "8192",
+  "--eos",
+  "1",
+  "--dspark",
+  "on",
+  "--dspark-conf",
+  "0.65",
+  "--dspark-block",
+  "3"
+ ]
+}

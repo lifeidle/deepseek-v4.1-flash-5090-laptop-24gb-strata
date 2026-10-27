@@ -1,0 +1,52 @@
+<svg viewBox="0 0 680 400" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Three-tier placement of DeepSeek-V4.1-Flash IQ2_XXS (257 GB)</title>
+  <desc>GPU holds dense weights and hot experts, RAM caches experts, SSD stores model files and the Engram table and streams the rest.</desc>
+  <rect x="0" y="0" width="680" height="400" fill="#ffffff"/>
+  <text x="40" y="34" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#1f2328">DeepSeek-V4.1-Flash IQ2_XXS (2.00 bpw): 257 GB in three tiers</text>
+  <text x="40" y="54" font-family="Segoe UI, sans-serif" font-size="12" fill="#57606a">Measured on RTX 5090 Laptop 24 GB + 64 GB RAM; placement decided by the engine (strata-dsv41 0.1.51)</text>
+  <g>
+    <rect x="40" y="72" width="180" height="216" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text x="52" y="94" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1f2328">RTX 5090 Laptop</text>
+    <text x="52" y="112" font-family="Segoe UI, sans-serif" font-size="12" fill="#57606a">VRAM 24 GB</text>
+    <rect x="52" y="128" width="156" height="66" rx="6" fill="#ddf4ff" stroke="#54aeff" stroke-width="1"/>
+    <text x="60" y="150" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">attention/dense</text>
+    <text x="60" y="168" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">5.86 GB</text>
+    <rect x="52" y="198" width="156" height="38" rx="6" fill="#fbefff" stroke="#a475f9" stroke-width="1"/>
+    <text x="60" y="216" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">hot experts</text>
+    <text x="60" y="232" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">1,651 / 15,360 · 14.57 GB</text>
+    <rect x="52" y="240" width="156" height="16" rx="6" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
+    <text x="52" y="272" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">KV cache fp4 · ctx up to 64K</text>
+  </g>
+  <g>
+    <rect x="250" y="72" width="180" height="216" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text x="262" y="94" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1f2328">System RAM</text>
+    <text x="262" y="112" font-family="Segoe UI, sans-serif" font-size="12" fill="#57606a">64 GB</text>
+    <rect x="262" y="128" width="156" height="24" rx="6" fill="#eff1f3" stroke="#d0d7de" stroke-width="1"/>
+    <text x="270" y="144" font-family="Segoe UI, sans-serif" font-size="11" fill="#1f2328">OS + apps ~10 GB</text>
+    <rect x="262" y="156" width="156" height="102" rx="6" fill="#fbefff" stroke="#a475f9" stroke-width="1"/>
+    <text x="270" y="178" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">expert store 37.6 GB</text>
+    <text x="270" y="196" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">auto-sized by engine</text>
+    <text x="270" y="214" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">hot 26.5 GB preloaded</text>
+    <text x="270" y="232" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">in 12.8 s at startup</text>
+    <text x="262" y="276" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">CPU lane: 13,709 experts in place</text>
+  </g>
+  <g>
+    <rect x="460" y="72" width="180" height="216" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <text x="472" y="94" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1f2328">NVMe SSD</text>
+    <text x="472" y="112" font-family="Segoe UI, sans-serif" font-size="12" fill="#57606a">source of truth</text>
+    <rect x="472" y="128" width="156" height="66" rx="6" fill="#ddf4ff" stroke="#54aeff" stroke-width="1"/>
+    <text x="480" y="150" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">model shards 138 GB</text>
+    <text x="480" y="168" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">cold experts stream from here</text>
+    <rect x="472" y="198" width="156" height="54" rx="6" fill="#fff1e8" stroke="#fb8f44" stroke-width="1"/>
+    <text x="480" y="218" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">Engram table 111 GB</text>
+    <text x="480" y="236" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">a few rows per token</text>
+    <text x="472" y="276" font-family="Segoe UI, sans-serif" font-size="11" fill="#57606a">slow disk = slower every word</text>
+  </g>
+  <g>
+    <rect x="40" y="306" width="600" height="64" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+    <rect x="40" y="306" width="4" height="64" rx="2" fill="#a475f9"/>
+    <text x="58" y="328" font-family="Segoe UI, sans-serif" font-size="12" fill="#1f2328">Per token: GPU computes dense + 6/384 routed experts; cache misses are computed on the CPU</text>
+    <text x="58" y="346" font-family="Segoe UI, sans-serif" font-size="12" fill="#57606a">in parallel while the GPU works; Engram rows stream from the SSD.</text>
+    <text x="58" y="362" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b949e">More VRAM is worth more than faster compute: each extra GB keeps ~110 more experts off the CPU/SSD path.</text>
+  </g>
+</svg>
